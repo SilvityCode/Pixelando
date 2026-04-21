@@ -1,7 +1,10 @@
+import Navbar from "./components/navbar"
+
+
 function App() {
   return (
     <div>
-      <h1>Pixelando</h1>
+      <Navbar />
     </div>
   )
 }
