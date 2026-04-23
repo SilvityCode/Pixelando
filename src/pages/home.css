@@ -1,0 +1,91 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f8f8f8;
+  margin: 0 0 1.5rem;
+  line-height: 1.1;
+}
+
+.hero-content h1 span {
+  color: #ff6b6b;
+}
+
+.hero-content p {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 2.5rem;
+  line-height: 1.6;
+}
+
+.hero-content button {
+  background-color: #c8922a;
+  color: #1a0a0a;
+  border: none;
+  border-bottom: 4px solid #7a5010;
+  border-right: 4px solid #7a5010;
+  padding: 1rem 2.5rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  image-rendering: pixelated;
+  transition: transform 0.1s, border 0.1s;
+}
+
+.hero-content button:hover {
+  background-color: #f0c060;
+}
+
+.hero-content button:active {
+  border-bottom: 1px solid #7a5010;
+  border-right: 1px solid #7a5010;
+  transform: translate(3px, 3px);
+}
+
+.hero-logo {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.cofre-container {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.cofre-img {
+  width: 80px;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.cofre-texto-top {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f0c060;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+  transition: opacity 0.3s;
+}

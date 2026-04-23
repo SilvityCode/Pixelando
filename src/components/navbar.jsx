@@ -1,9 +1,22 @@
 import './navbar.css'
+import logo from '../assets/logo_navbar.png'
+import { motion } from 'framer-motion'
 
 function Navbar() {
   return (
     <nav>
-      <h1>Pixelando</h1>
+      <motion.img
+        src={logo}
+        alt="Pixelando"
+        className="nav-logo"
+        whileHover={{
+          rotate: [0, -5, 5, -3, 3, 0],
+          transition: {
+            duration: 0.6,
+            ease: 'easeInOut'
+          }
+        }}
+      />
       <ul>
         <li>Inicio</li>
         <li>Galería</li>
