@@ -44,5 +44,50 @@ nav ul li:hover {
 .nav-logo {
   height: 200px;
   width: auto;
+}
+
+
+/* Responsive Styles */
+
+.hamburguesa {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
   cursor: pointer;
+}
+
+.hamburguesa span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #c8922a;
+  transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+  .hamburguesa {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #1a0a0a;
+    border-top: 2px solid #c8922a;
+    padding: 1rem 0;
+    gap: 0;
+  }
+
+  .nav-links.abierto {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 0.8rem 2.5rem;
+    border-bottom: 1px solid rgba(200, 146, 42, 0.2);
+  }
 }
