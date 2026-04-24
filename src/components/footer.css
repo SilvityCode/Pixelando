@@ -1,0 +1,44 @@
+.footer {
+  background: #1a0a0a;
+  border-top: 2px solid #c8922a;
+  padding: 3rem 2rem 1rem;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.footer-section h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #c8922a;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  letter-spacing: 0.08em;
+}
+
+.footer-section p {
+  font-family: 'Space Grotesk', sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  margin: 0 0 0.5rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(200, 146, 42, 0.3);
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-family: 'Space Grotesk', sans-serif;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.8rem;
+  margin: 0;
+}

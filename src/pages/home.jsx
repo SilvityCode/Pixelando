@@ -74,9 +74,6 @@ function Home() {
 
       <Banner />
 
-      <section id="galeria" style={{ marginTop: '2rem', color: 'white' }}>
-        <h2>Galería</h2>
-      </section>
     </div>
   )
 }
