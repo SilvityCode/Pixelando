@@ -1,0 +1,30 @@
+.banner {
+  overflow: hidden;
+  background: #c8922a;
+  padding: 1.2rem 0;
+  border-top: 2px solid #7a5010;
+  border-bottom: 2px solid #7a5010;
+  margin: 6rem 0;
+  width: 100%;
+}
+
+.banner-track {
+  display: flex;
+  gap: 0;
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
+}
+
+.banner-track span {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a0a0a;
+  letter-spacing: 0.1em;
+  padding-right: 2rem;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.33%); }
+}
