@@ -4,15 +4,17 @@ import cofreCerrado from '../assets/cofreCerrado.png'
 import cotreAbierto from '../assets/cofreAbierto.png'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Banner from '../components/banner'
 
 function Home() {
   const [abierto, setAbierto] = useState(false)
+  const navigate = useNavigate()
 
   const handleCofre = () => {
     setAbierto(true)
     setTimeout(() => {
-      document.getElementById('galeria').scrollIntoView({ behavior: 'smooth' })
+      navigate('/galeria')
     }, 600)
   }
 
@@ -43,7 +45,11 @@ function Home() {
             Creaciones únicas de hama beads. Personajes, encargos y mucho color.
           </motion.p>
 
-          <div className="cofre-container" onClick={handleCofre}>
+          <motion.div
+            layoutId="cofre"
+            className="cofre-container"
+            onClick={handleCofre}
+          >
             <span className="cofre-texto-top">Ver la galería</span>
             <AnimatePresence mode="wait">
               {!abierto ? (
@@ -68,15 +74,11 @@ function Home() {
                 />
               )}
             </AnimatePresence>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       <Banner />
-
-      <section id="galeria" style={{ marginTop: '2rem', color: 'white' }}>
-        <h2>Galería</h2>
-      </section>
     </div>
   )
 }

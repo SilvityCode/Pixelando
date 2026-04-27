@@ -1,16 +1,35 @@
-# React + Vite
+# Pixelando 👾
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tienda online de hama beads artesanales con estilo pixel art medieval.
 
-Currently, two official plugins are available:
+## Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Pixelando es una tienda donde se pueden ver y encargar creaciones únicas de hama beads hechas a mano. El diseño está inspirado en la estética de taberna medieval pixel art.
 
-## React Compiler
+## Características
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Página de inicio con animaciones (Framer Motion)
+- Tabla de rarezas (Común, Raro, Épico, Legendario) con precios
+- Formulario de encargos personalizados con rareza preseleccionada
+- Navegación entre páginas con React Router
+- Diseño responsive con menú hamburguesa
+- Banner animado con scroll infinito
 
-## Expanding the ESLint configuration
+## Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React + Vite
+- Framer Motion
+- React Router DOM
+- React Icons
+- CSS modular por componente
+
+## Instalación
+
+```bash
+npm install
+npm run dev
+```
+
+## Estado del proyecto
+
+En desarrollo activo 🔧. Próximamente: backend con Node.js + Express + PostgreSQL.
