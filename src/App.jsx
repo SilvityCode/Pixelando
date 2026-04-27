@@ -4,6 +4,7 @@ import Navbar from "./components/navbar"
 import Home from "./pages/home"
 import Footer from "./components/footer"
 import Galeria from "./pages/galeria"
+import Encargos from "./pages/encargos"
 
 function App() {
   const location = useLocation()
@@ -15,6 +16,7 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="/galeria" element={<Galeria />} />
+          <Route path="/encargos" element={<Encargos />} />
         </Routes>
       </AnimatePresence>
       <Footer />

@@ -1,5 +1,6 @@
-import './Galeria.css'
+import './galeria.css'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 const rarezas = [
   {
@@ -56,7 +57,9 @@ function Galeria() {
               <p className="rareza-tamaño">{rareza.tamaño}</p>
               <p className="rareza-descripcion">{rareza.descripcion}</p>
               <p className="rareza-precio">{rareza.precio}</p>
-              <button className="rareza-btn">Encargar</button>
+              <Link to={`/encargos?rareza=${rareza.color}`}>
+                <button className="rareza-btn">Encargar</button>
+              </Link>
             </div>
           ))}
         </div>

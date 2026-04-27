@@ -22,7 +22,7 @@ function Navbar() {
       <ul className={menuAbierto ? 'nav-links abierto' : 'nav-links'}>
         <li><Link to="/">Inicio</Link></li>
         <li><Link to="/galeria">Galería</Link></li>
-        <li>Encargos</li>
+        <li><Link to="/encargos">Encargos</Link></li>
         <li>Contacto</li>
       </ul>
 
