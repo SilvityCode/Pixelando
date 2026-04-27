@@ -108,3 +108,91 @@
 .file-input:hover {
   border-color: #c8922a;
 }
+
+
+/*Estilos para selector visual*/
+
+.rareza-selector {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+}
+
+.rareza-opcion {
+  position: relative;
+  border: 2px solid;
+  border-radius: 4px;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  transition: transform 0.2s;
+}
+
+.rareza-opcion:hover {
+  transform: translateY(-2px);
+}
+
+.rareza-opcion.comun { border-color: #9d9d9d; background: rgba(150,150,150,0.05); }
+.rareza-opcion.raro { border-color: #0070dd; background: rgba(0,112,221,0.05); }
+.rareza-opcion.epico { border-color: #a335ee; background: rgba(163,53,238,0.05); }
+.rareza-opcion.legendario { border-color: #c8922a; background: rgba(200,146,42,0.05); }
+
+.rareza-opcion.seleccionada.comun { background: rgba(150,150,150,0.2); border-width: 3px; box-shadow: 0 0 15px rgba(150,150,150,0.6), inset 0 0 8px rgba(150,150,150,0.1); }
+.rareza-opcion.seleccionada.raro { background: rgba(0,112,221,0.2); border-width: 3px; box-shadow: 0 0 15px rgba(0,112,221,0.6), inset 0 0 8px rgba(0,112,221,0.1); }
+.rareza-opcion.seleccionada.epico { background: rgba(163,53,238,0.2); border-width: 3px; box-shadow: 0 0 15px rgba(163,53,238,0.6), inset 0 0 8px rgba(163,53,238,0.1); }
+.rareza-opcion.seleccionada.legendario { background: rgba(200,146,42,0.2); border-width: 3px; box-shadow: 0 0 15px rgba(200,146,42,0.6), inset 0 0 8px rgba(200,146,42,0.1); }
+
+.rareza-opcion-nombre {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.comun .rareza-opcion-nombre { color: #9d9d9d; }
+.raro .rareza-opcion-nombre { color: #0070dd; }
+.epico .rareza-opcion-nombre { color: #a335ee; }
+.legendario .rareza-opcion-nombre { color: #c8922a; }
+
+.rareza-opcion-precio {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+}
+
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1a0a0a;
+  border: 1px solid #c8922a;
+  border-radius: 4px;
+  padding: 0.6rem 0.8rem;
+  width: 180px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.tooltip-tamaño {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8rem;
+  color: #c8922a;
+  margin: 0 0 4px;
+  font-weight: 700;
+}
+
+.tooltip-desc {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.7);
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .rareza-selector {
+    grid-template-columns: 1fr;
+  }
+}

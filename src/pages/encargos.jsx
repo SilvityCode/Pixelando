@@ -1,17 +1,43 @@
 import './encargos.css'
 import { useSearchParams } from 'react-router-dom'
+import { useState } from 'react'
 
-const rarezas = ['comun', 'raro', 'epico', 'legendario']
-const rarezasNombres = {
-  comun: 'Común — 6€',
-  raro: 'Raro — 15€',
-  epico: 'Épico — 30€',
-  legendario: 'Legendario — desde 20€'
-}
+const rarezas = [
+  {
+    id: 'comun',
+    nombre: 'Común',
+    precio: '6€',
+    tamaño: 'hasta 10x10cm',
+    descripcion: 'Perfecto para llaveros e imanes pequeños'
+  },
+  {
+    id: 'raro',
+    nombre: 'Raro',
+    precio: '15€',
+    tamaño: 'hasta 20x20cm',
+    descripcion: 'Ideal para cuadros y decoración de pared'
+  },
+  {
+    id: 'epico',
+    nombre: 'Épico',
+    precio: '30€',
+    tamaño: 'hasta 30x30cm',
+    descripcion: 'Para piezas grandes y muy detalladas'
+  },
+  {
+    id: 'legendario',
+    nombre: 'Legendario',
+    precio: 'desde 20€',
+    tamaño: 'Encargo personalizado',
+    descripcion: 'Tu diseño a medida, consultamos precio según complejidad'
+  }
+]
 
 function Encargos() {
   const [searchParams] = useSearchParams()
   const rarezaInicial = searchParams.get('rareza') || 'comun'
+  const [rarezaSeleccionada, setRarezaSeleccionada] = useState(rarezaInicial)
+  const [tooltip, setTooltip] = useState(null)
 
   return (
     <div className="encargos-page">
@@ -31,11 +57,27 @@ function Encargos() {
 
         <div className="form-group">
           <label>Rareza</label>
-          <select defaultValue={rarezaInicial}>
+          <div className="rareza-selector">
             {rarezas.map(r => (
-              <option key={r} value={r}>{rarezasNombres[r]}</option>
+              <div
+                key={r.id}
+                className={`rareza-opcion ${r.id} ${rarezaSeleccionada === r.id ? 'seleccionada' : ''}`}
+                onClick={() => setRarezaSeleccionada(r.id)}
+                onMouseEnter={() => setTooltip(r.id)}
+                onMouseLeave={() => setTooltip(null)}
+              >
+                <span className="rareza-opcion-nombre">{r.nombre}</span>
+                <span className="rareza-opcion-precio">{r.precio}</span>
+
+                {tooltip === r.id && (
+                  <div className="tooltip">
+                    <p className="tooltip-tamaño">{r.tamaño}</p>
+                    <p className="tooltip-desc">{r.descripcion}</p>
+                  </div>
+                )}
+              </div>
             ))}
-          </select>
+          </div>
         </div>
 
         <div className="form-group">
@@ -49,8 +91,8 @@ function Encargos() {
         </div>
 
         <div className="form-group">
-            <label>Foto de referencia (opcional)</label>
-            <input type="file" accept="image/*" className="file-input" />
+          <label>Foto de referencia (opcional)</label>
+          <input type="file" accept="image/*" className="file-input" />
         </div>
 
         <button type="submit" className="encargos-btn">Enviar encargo</button>
