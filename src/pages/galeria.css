@@ -1,0 +1,135 @@
+.galeria-page {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.galeria-titulo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #c8922a;
+  text-align: center;
+  margin: 0 0 0.5rem;
+}
+
+.galeria-subtitulo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin: 0 0 3rem;
+}
+
+.rarezas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.rareza-card {
+  border: 2px solid;
+  border-radius: 4px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s;
+  image-rendering: pixelated;
+}
+
+.rareza-card:hover {
+  transform: translateY(-4px);
+}
+
+.comun {
+  background: rgba(150, 150, 150, 0.1);
+  border-color: #9d9d9d;
+}
+
+.raro {
+  background: rgba(0, 112, 221, 0.1);
+  border-color: #0070dd;
+}
+
+.epico {
+  background: rgba(163, 53, 238, 0.1);
+  border-color: #a335ee;
+}
+
+.legendario {
+  background: rgba(255, 165, 0, 0.1);
+  border-color: #c8922a;
+}
+
+.rareza-nombre {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
+.comun .rareza-nombre { color: #9d9d9d; }
+.raro .rareza-nombre { color: #0070dd; }
+.epico .rareza-nombre { color: #a335ee; }
+.legendario .rareza-nombre { color: #c8922a; }
+
+.rareza-tamaño {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 0.8rem;
+}
+
+.rareza-descripcion {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 1.2rem;
+  line-height: 1.5;
+}
+
+.rareza-precio {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f8f8f8;
+  margin: 0 0 1.2rem;
+}
+
+.rareza-btn {
+  background: transparent;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+  letter-spacing: 0.08em;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.comun .rareza-btn { border: 2px solid #9d9d9d; color: #9d9d9d; }
+.raro .rareza-btn { border: 2px solid #0070dd; color: #0070dd; }
+.epico .rareza-btn { border: 2px solid #a335ee; color: #a335ee; }
+.legendario .rareza-btn { border: 2px solid #c8922a; color: #c8922a; }
+
+.rareza-btn:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-2px);
+}
+
+.galeria-ejemplos-titulo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #c8922a;
+  text-align: center;
+  margin: 0 0 2rem;
+}
+
+.galeria-pronto {
+  font-family: 'Space Grotesk', sans-serif;
+  color: rgba(255,255,255,0.3);
+  text-align: center;
+  font-size: 1rem;
+}
