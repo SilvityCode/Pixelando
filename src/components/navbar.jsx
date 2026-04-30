@@ -23,7 +23,7 @@ function Navbar() {
         <li><Link to="/">Inicio</Link></li>
         <li><Link to="/galeria">Galería</Link></li>
         <li><Link to="/encargos">Encargos</Link></li>
-        <li>Contacto</li>
+        <li><Link to="/acceder">Acceder</Link></li>
       </ul>
 
       <div className="hamburguesa" onClick={() => setMenuAbierto(!menuAbierto)}>

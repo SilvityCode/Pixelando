@@ -138,11 +138,14 @@
 .rareza-opcion.raro { border-color: #0070dd; background: rgba(0,112,221,0.05); }
 .rareza-opcion.epico { border-color: #a335ee; background: rgba(163,53,238,0.05); }
 .rareza-opcion.legendario { border-color: #c8922a; background: rgba(200,146,42,0.05); }
+.rareza-opcion.mitico { border-color: #ff00ff; background: rgba(255,0,255,0.05); }
 
 .rareza-opcion.seleccionada.comun { background: rgba(150,150,150,0.2); border-width: 3px; box-shadow: 0 0 15px rgba(150,150,150,0.6), inset 0 0 8px rgba(150,150,150,0.1); }
 .rareza-opcion.seleccionada.raro { background: rgba(0,112,221,0.2); border-width: 3px; box-shadow: 0 0 15px rgba(0,112,221,0.6), inset 0 0 8px rgba(0,112,221,0.1); }
 .rareza-opcion.seleccionada.epico { background: rgba(163,53,238,0.2); border-width: 3px; box-shadow: 0 0 15px rgba(163,53,238,0.6), inset 0 0 8px rgba(163,53,238,0.1); }
 .rareza-opcion.seleccionada.legendario { background: rgba(200,146,42,0.2); border-width: 3px; box-shadow: 0 0 15px rgba(200,146,42,0.6), inset 0 0 8px rgba(200,146,42,0.1); }
+.rareza-opcion.seleccionada.mitico { border-image: linear-gradient(90deg, rgba(255, 0, 255, 0.9), rgba(0, 255, 255, 0.9), rgba(0, 255, 150, 0.9), rgba(255, 255, 0, 0.9)) 1; box-shadow: 0 0 15px rgba(255,0,255,0.6), inset 0 0 8px rgba(255,0,255,0.1); }
+
 
 .rareza-opcion-nombre {
   font-family: 'Space Grotesk', sans-serif;
@@ -154,6 +157,7 @@
 .raro .rareza-opcion-nombre { color: #0070dd; }
 .epico .rareza-opcion-nombre { color: #a335ee; }
 .legendario .rareza-opcion-nombre { color: #c8922a; }
+.mitico .rareza-opcion-nombre { color: #ff00ff; }
 
 .rareza-opcion-precio {
   font-family: 'Space Grotesk', sans-serif;
@@ -195,4 +199,27 @@
   .rareza-selector {
     grid-template-columns: 1fr;
   }
+}
+
+
+/*Estilos para el botón de pergamino*/
+
+.pergamino-btn-img {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s;
+}
+
+.pergamino-btn-img:hover {
+  transform: scale(1.05);
+}
+
+.pergamino-img {
+  width: 350px;
+  height: auto;
 }

@@ -61,6 +61,36 @@
   border-color: #c8922a;
 }
 
+.mitico {
+  background: linear-gradient(
+  135deg,
+  rgba(255, 0, 255, 0.9),
+  rgba(0, 255, 255, 0.9),
+  rgba(0, 255, 150, 0.9),
+  rgba(255, 255, 0, 0.9)
+);
+
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+
+border: 1px solid rgba(255, 255, 255, 0.3);  
+}
+
+.mitico .rareza-nombre {
+  color: #ff00ff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+.mitico .rareza-tamaño,
+.mitico .rareza-descripcion,
+.mitico .rareza-precio {
+  color: #0a0a0a;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+
 .rareza-nombre {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1.3rem;
@@ -112,11 +142,18 @@
 .raro .rareza-btn { border: 2px solid #0070dd; color: #0070dd; }
 .epico .rareza-btn { border: 2px solid #a335ee; color: #a335ee; }
 .legendario .rareza-btn { border: 2px solid #c8922a; color: #c8922a; }
+.mitico .rareza-btn { border: 2px solid #ff00ff; color: #0a0a0a; }
 
 .rareza-btn:hover {
   background: rgba(255,255,255,0.1);
   transform: translateY(-2px);
 }
+
+.mitico .rareza-btn:hover {
+  background: rgba(234, 182, 240, 0.7); 
+  transform: translateY(-2px);
+}
+
 
 .galeria-ejemplos-titulo {
   font-family: 'Space Grotesk', sans-serif;

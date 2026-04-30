@@ -34,6 +34,14 @@ const rarezas = [
     precio: 'desde 20€',
     color: 'legendario',
     descripcion: 'Tu diseño, hecho a medida'
+  },
+  {
+    id: 5,
+    nombre: 'Mítico',
+    tamaño: 'Pack personalizado',
+    precio: 'desde 30€',
+    color: 'mitico',
+    descripcion: 'Ideal para sets, colecciones o regalos.'
   }
 ]
 
