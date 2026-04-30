@@ -167,3 +167,35 @@
     width: 100%;
   }
 }
+
+
+/*estilos para validez de formulario*/
+
+.form-error {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8rem;
+  color: #ff4757;
+  margin-top: 4px;
+}
+
+.password-requisitos {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.password-requisitos li {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8rem;
+}
+
+.cumplido {
+  color: #2ed573;
+}
+
+.pendiente {
+  color: rgba(255, 255, 255, 0.4);
+}
