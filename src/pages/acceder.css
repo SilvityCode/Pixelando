@@ -1,0 +1,201 @@
+.acceder-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.acceder-titulo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #c8922a;
+  text-align: center;
+  margin: 0 0 0.5rem;
+}
+
+.acceder-subtitulo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin: 0 0 2.5rem;
+}
+
+.acceder-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  width: 100%;
+}
+
+.acceder-form-container {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(200, 146, 42, 0.3);
+  border-radius: 4px;
+  padding: 2rem;
+}
+
+.tablon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tablon-img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+}
+
+.tablon-texto {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.tablon-texto h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #c8922a;
+  margin: 0 0 0.5rem;
+}
+
+.tablon-texto p {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.acceder-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.acceder-btn {
+  background: #c8922a;
+  color: #1a0a0a;
+  border: none;
+  border-bottom: 6px solid #7a5010;
+  border-right: 4px solid #7a5010;
+  border-left: 4px solid #f0c060;
+  border-top: 4px solid #f0c060;
+  padding: 0.8rem 2rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.1s, border 0.1s;
+  margin-top: 0.5rem;
+  image-rendering: pixelated;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.acceder-btn:hover {
+  background: #f0c060;
+  transform: translateY(-2px);
+}
+
+.acceder-btn:active {
+  border-bottom: 2px solid #7a5010;
+  border-top: 6px solid #f0c060;
+  transform: translateY(4px);
+}
+
+.acceder-switch {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin: 0;
+}
+
+.acceder-switch span {
+  color: #c8922a;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.acceder-switch span:hover {
+  color: #f0c060;
+}
+
+
+/*responsive*/
+
+@media (max-width: 768px) {
+  .acceder-contenido {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .tablon-img {
+    max-width: 300px;
+  }
+
+  .acceder-form-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.5rem;
+  }
+
+  .acceder-page {
+    padding: 2rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .acceder-titulo {
+    text-align: center;
+    width: 100%;
+  }
+
+  .acceder-subtitulo {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+
+/*estilos para validez de formulario*/
+
+.form-error {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8rem;
+  color: #ff4757;
+  margin-top: 4px;
+}
+
+.password-requisitos {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.password-requisitos li {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8rem;
+}
+
+.cumplido {
+  color: #2ed573;
+}
+
+.pendiente {
+  color: rgba(255, 255, 255, 0.4);
+}

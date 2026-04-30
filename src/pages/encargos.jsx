@@ -1,6 +1,8 @@
 import './encargos.css'
 import { useSearchParams } from 'react-router-dom'
 import { useState } from 'react'
+import pergamino from '../assets/pergamino.png'
+
 
 const rarezas = [
   {
@@ -30,6 +32,14 @@ const rarezas = [
     precio: 'desde 20€',
     tamaño: 'Encargo personalizado',
     descripcion: 'Tu diseño a medida, consultamos precio según complejidad'
+  },
+  {
+    id: 'mitico',
+    nombre: 'Mítico',
+    tamaño: 'Pack personalizado',
+    precio: 'desde 30€',
+    color: 'mitico',
+    descripcion: 'Ideal para sets, colecciones o regalos.'
   }
 ]
 
@@ -95,7 +105,9 @@ function Encargos() {
           <input type="file" accept="image/*" className="file-input" />
         </div>
 
-        <button type="submit" className="encargos-btn">Enviar encargo</button>
+        <button type="submit" className="pergamino-btn-img">
+          <img src={pergamino} alt="Realizar pedido" className="pergamino-img" />
+        </button>
       </form>
     </div>
   )

@@ -61,6 +61,36 @@
   border-color: #c8922a;
 }
 
+.mitico {
+  background: linear-gradient(
+  135deg,
+  rgba(255, 0, 255, 0.9),
+  rgba(0, 255, 255, 0.9),
+  rgba(0, 255, 150, 0.9),
+  rgba(255, 255, 0, 0.9)
+);
+
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+
+border: 1px solid rgba(255, 255, 255, 0.3);  
+}
+
+.mitico .rareza-nombre {
+  color: #ff00ff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+.mitico .rareza-tamaño,
+.mitico .rareza-descripcion,
+.mitico .rareza-precio {
+  color: #0a0a0a;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+
 .rareza-nombre {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1.3rem;
@@ -112,11 +142,18 @@
 .raro .rareza-btn { border: 2px solid #0070dd; color: #0070dd; }
 .epico .rareza-btn { border: 2px solid #a335ee; color: #a335ee; }
 .legendario .rareza-btn { border: 2px solid #c8922a; color: #c8922a; }
+.mitico .rareza-btn { border: 2px solid #ff00ff; color: #0a0a0a; }
 
 .rareza-btn:hover {
   background: rgba(255,255,255,0.1);
   transform: translateY(-2px);
 }
+
+.mitico .rareza-btn:hover {
+  background: rgba(234, 182, 240, 0.7); 
+  transform: translateY(-2px);
+}
+
 
 .galeria-ejemplos-titulo {
   font-family: 'Space Grotesk', sans-serif;
@@ -136,4 +173,74 @@
 
 .rareza-card a {
   text-decoration: none;
+}
+
+
+/*estilos botones de selección */
+
+.tipo-selector {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.tipo-btn {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.7rem 1.5rem;
+  border: 2px solid rgba(200, 146, 42, 0.4);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s;
+  letter-spacing: 0.05em;
+}
+
+.tipo-btn:hover {
+  border-color: #c8922a;
+  color: #c8922a;
+}
+
+.tipo-btn.activo {
+  background: #c8922a;
+  border-color: #c8922a;
+  color: #1a0a0a;
+}
+
+
+/*estilos para grid de creaciones*/
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.ejemplo-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid rgba(200, 146, 42, 0.3);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.ejemplo-tipo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.75rem;
+  color: rgba(200, 146, 42, 0.7);
+  letter-spacing: 0.05em;
+}
+
+.ejemplo-nombre {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  text-align: left;
 }
