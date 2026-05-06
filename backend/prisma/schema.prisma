@@ -1,0 +1,61 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+/// Tabla de usuarios registrados en Pixelando
+model Usuario {
+  id         Int      @id @default(autoincrement())
+  nombre     String
+  email      String   @unique
+  password   String?
+  googleId   String?  @unique
+  rol        Rol      @default(USUARIO)
+  creadoEn   DateTime @default(now())
+  pedidos    Pedido[]
+}
+
+/// Roles disponibles en el sistema
+enum Rol {
+  USUARIO
+  ADMIN
+}
+
+/// Tabla de pedidos realizados por los usuarios
+model Pedido {
+  id          Int        @id @default(autoincrement())
+  usuario     Usuario    @relation(fields: [usuarioId], references: [id])
+  usuarioId   Int
+  rareza      String
+  tipoCuenta  String
+  descripcion String
+  enlace      String?
+  estado      Estado     @default(PENDIENTE)
+  precio      Float?
+  creadoEn    DateTime   @default(now())
+  imagenes    Imagen[]
+}
+
+/// Estados posibles de un pedido
+enum Estado {
+  PENDIENTE
+  EN_PROCESO
+  COMPLETADO
+  CANCELADO
+}
+
+/// Tabla de imágenes de referencia de cada pedido
+model Imagen {
+  id       Int    @id @default(autoincrement())
+  pedido   Pedido @relation(fields: [pedidoId], references: [id])
+  pedidoId Int
+  url      String
+}
