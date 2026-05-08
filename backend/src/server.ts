@@ -4,13 +4,12 @@
  * Configura Express, middlewares globales y arranca el servidor.
  */
 
-// Carga las variables de entorno desde el archivo .env
 import dotenv from 'dotenv'
 dotenv.config()
 
 import express from 'express'
 import cors from 'cors'
-import authRoutes from './src/routes/authRoutes'
+import authRoutes from './routes/authRoutes'
 
 const app = express()
 
@@ -23,7 +22,7 @@ app.use(cors())
 app.use(express.json())
 
 /**
- * Rutas
+ * Rutas públicas
  * /auth → rutas de registro y login
  */
 app.use('/auth', authRoutes)
