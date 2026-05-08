@@ -1,12 +1,13 @@
 /**
- * server.js
+ * server.ts
  * Punto de entrada principal del servidor de Pixelando.
  * Configura Express, middlewares globales y arranca el servidor.
  */
 
-const express = require('express')
-const cors = require('cors')
-const dotenv = require('dotenv')
+import express from 'express'
+import cors from 'cors'
+import dotenv from 'dotenv'
+import authRoutes from './src/routes/authRoutes'
 
 // Carga las variables de entorno desde el archivo .env
 dotenv.config()
@@ -22,6 +23,12 @@ app.use(cors())
 app.use(express.json())
 
 /**
+ * Rutas
+ * /auth → rutas de registro y login
+ */
+app.use('/auth', authRoutes)
+
+/**
  * Ruta de comprobación
  * GET /
  * Devuelve un mensaje para verificar que el servidor está funcionando
@@ -30,9 +37,8 @@ app.get('/', (req, res) => {
   res.json({ mensaje: 'API de Pixelando funcionando' })
 })
 
-
 /**
- * Puerto en el que escucha el servidor, por defecto 3000 
+ * Puerto en el que escucha el servidor, por defecto 3000
  * Arranca el servidor en el puerto configurado
  */
 const PORT = process.env.PORT || 3000
