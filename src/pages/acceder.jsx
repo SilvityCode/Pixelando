@@ -1,8 +1,10 @@
 import './acceder.css'
 import { useState } from 'react'
 import tablon from '../assets/tablon.png'
+import { useAuth } from '../context/AuthContext'
 
 function Acceder() {
+  const { login, registro } = useAuth()
   const [esLogin, setEsLogin] = useState(true)
 
   const [loginData, setLoginData] = useState({ email: '', password: '' })
@@ -42,7 +44,11 @@ function Acceder() {
     return errors
   }
 
-  const handleLogin = (e) => {
+  /**
+   * Maneja el envío del formulario de login.
+   * Llama al contexto de autenticación para iniciar sesión.
+   */
+  const handleLogin = async (e) => {
     e.preventDefault()
     const errors = validarLogin()
     if (Object.keys(errors).length > 0) {
@@ -50,10 +56,20 @@ function Acceder() {
       return
     }
     setLoginErrors({})
-    console.log('Login:', loginData)
+    try {
+      await login(loginData.email, loginData.password)
+      // Redirige al home después del login
+      window.location.href = '/'
+    } catch (error) {
+      setLoginErrors({ general: 'Email o contraseña incorrectos' })
+    }
   }
 
-  const handleRegistro = (e) => {
+  /**
+   * Maneja el envío del formulario de registro.
+   * Llama al contexto de autenticación para registrar e iniciar sesión.
+   */
+  const handleRegistro = async (e) => {
     e.preventDefault()
     const errors = validarRegistro()
     if (Object.keys(errors).length > 0) {
@@ -61,7 +77,12 @@ function Acceder() {
       return
     }
     setRegisterErrors({})
-    console.log('Registro:', registerData)
+    try {
+      await registro(registerData.nombre, registerData.email, registerData.password)
+      window.location.href = '/'
+    } catch (error) {
+      setRegisterErrors({ general: 'Error al crear la cuenta, el email puede que ya esté registrado' })
+    }
   }
 
   return (
@@ -93,6 +114,7 @@ function Acceder() {
                 />
                 {loginErrors.password && <span className="form-error">{loginErrors.password}</span>}
               </div>
+              {loginErrors.general && <span className="form-error">{loginErrors.general}</span>}
               <button type="submit" className="acceder-btn">Iniciar sesión</button>
               <p className="acceder-switch">
                 ¿No tienes cuenta?{' '}
@@ -150,6 +172,7 @@ function Acceder() {
                 />
                 {registerErrors.confirmPassword && <span className="form-error">{registerErrors.confirmPassword}</span>}
               </div>
+              {registerErrors.general && <span className="form-error">{registerErrors.general}</span>}
               <button type="submit" className="acceder-btn">Crear cuenta</button>
               <p className="acceder-switch">
                 ¿Ya tienes cuenta?{' '}
