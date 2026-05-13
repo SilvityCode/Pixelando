@@ -10,6 +10,7 @@ dotenv.config()
 import express from 'express'
 import cors from 'cors'
 import authRoutes from './routes/authRoutes'
+import pedidoRoutes from './routes/pedidoRoutes'
 
 const app = express()
 
@@ -26,6 +27,13 @@ app.use(express.json())
  * /auth → rutas de registro y login
  */
 app.use('/auth', authRoutes)
+
+/**
+ * Rutas de pedidos
+ * /pedidos → rutas de creación y consulta de pedidos
+ */
+app.use('/pedidos', pedidoRoutes) 
+
 
 /**
  * Ruta de comprobación
