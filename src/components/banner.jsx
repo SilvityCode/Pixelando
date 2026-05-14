@@ -9,6 +9,9 @@ function Banner() {
         <span>{texto}</span>
         <span>{texto}</span>
         <span>{texto}</span>
+        <span>{texto}</span>
+        <span>{texto}</span>
+        <span>{texto}</span>
       </div>
     </div>
   )

@@ -1,0 +1,194 @@
+.admin-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 6rem 2rem 3rem;
+}
+
+.admin-titulo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #c8922a;
+  text-align: center;
+  margin: 0 0 0.5rem;
+}
+
+.admin-subtitulo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin: 0 0 3rem;
+}
+
+.admin-cargando,
+.admin-vacio {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #c8922a;
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 4rem;
+}
+
+.admin-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.admin-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid rgba(200, 146, 42, 0.4);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: border-color 0.2s;
+}
+
+.admin-card:hover {
+  border-color: #c8922a;
+}
+
+.admin-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.admin-card-usuario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.admin-nombre {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f8f8f8;
+}
+
+.admin-email {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.pedido-estado {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+}
+
+.estado-pendiente { background: rgba(200, 146, 42, 0.15); color: #c8922a; border: 1px solid #c8922a; }
+.estado-en-proceso { background: rgba(0, 112, 221, 0.15); color: #4da6ff; border: 1px solid #4da6ff; }
+.estado-completado { background: rgba(0, 200, 100, 0.15); color: #00c864; border: 1px solid #00c864; }
+.estado-cancelado { background: rgba(220, 50, 50, 0.15); color: #ff6464; border: 1px solid #ff6464; }
+
+.admin-card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-rareza {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #c8922a;
+  text-transform: capitalize;
+}
+
+.admin-fecha {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.admin-descripcion {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.admin-enlace {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  color: #4da6ff;
+  text-decoration: none;
+}
+
+.admin-enlace:hover {
+  text-decoration: underline;
+}
+
+.admin-controles {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  border-top: 1px solid rgba(200, 146, 42, 0.2);
+  padding-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.admin-select {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(200, 146, 42, 0.3);
+  border-radius: 4px;
+  padding: 0.5rem 0.8rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
+  color: #f8f8f8;
+  cursor: pointer;
+  flex: 1;
+}
+
+.admin-precio-input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(200, 146, 42, 0.3);
+  border-radius: 4px;
+  padding: 0.5rem 0.8rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
+  color: #f8f8f8;
+  width: 100px;
+}
+
+.admin-btn-guardar {
+  background: #c8922a;
+  color: #1a0a0a;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.admin-btn-guardar:hover {
+  background: #f0c060;
+}
+
+@media (max-width: 768px) {
+  .admin-card-header {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .admin-controles {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-precio-input {
+    width: 100%;
+  }
+}

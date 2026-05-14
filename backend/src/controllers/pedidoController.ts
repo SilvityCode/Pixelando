@@ -144,8 +144,17 @@ export const actualizarEstado = async (req: RequestConUsuario, res: Response) =>
         // Solo actualiza el precio si se ha proporcionado
         ...(precio !== undefined && { precio })
       },
-      include: { imagenes: true }
-    })
+      include: { 
+        imagenes: true,
+        usuario: {
+          select: {
+          id: true,
+          nombre: true,
+          email: true
+        }
+      }
+    }
+  })
 
     res.json({
       mensaje: 'Pedido actualizado correctamente',

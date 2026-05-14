@@ -5,9 +5,11 @@ import Home from "./pages/home"
 import Footer from "./components/footer"
 import Galeria from "./pages/galeria"
 import Encargos from "./pages/encargos"
-import Acceder from "./pages/acceder"
+import Acceder from "./pages/acceder" 
 import MisPedidos from './pages/mis-pedidos'
 import RutaProtegida from './components/rutaProtegida'
+import Admin from './pages/admin'
+
 
 function App() {
   const location = useLocation()
@@ -25,6 +27,11 @@ function App() {
             <RutaProtegida>
             <MisPedidos />
           </RutaProtegida>
+          } />
+          <Route path="/admin" element={
+            <RutaProtegida>
+              <Admin />
+            </RutaProtegida>
           } />
         </Routes>
       </AnimatePresence>

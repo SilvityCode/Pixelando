@@ -32,10 +32,12 @@ function Navbar() {
         <li><Link to="/encargos">Encargos</Link></li>
 
         {usuario ? (
-          // Si está logueado muestra su nombre y el botón de logout
           <>
+            {usuario.rol === 'ADMIN' && (
+              <li><Link to="/admin">Panel Admin</Link></li>
+            )}
             <li><Link to="/mis-pedidos">Mis Pedidos</Link></li>
-            <li className="nav-usuario">Hola, {usuario.nombre}👋</li>
+            <li className="nav-usuario">Hola, {usuario.nombre} 👋</li>
             <li>
               <button className="nav-logout-btn" onClick={handleLogout}>
                 Cerrar sesión
@@ -43,7 +45,6 @@ function Navbar() {
             </li>
           </>
         ) : (
-          // Si no está logueado muestra el enlace de acceder
           <li><Link to="/acceder">Acceder</Link></li>
         )}
       </ul>
