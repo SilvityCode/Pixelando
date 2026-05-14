@@ -34,6 +34,7 @@ function Navbar() {
         {usuario ? (
           // Si está logueado muestra su nombre y el botón de logout
           <>
+            <li><Link to="/mis-pedidos">Mis Pedidos</Link></li>
             <li className="nav-usuario">Hola, {usuario.nombre}👋</li>
             <li>
               <button className="nav-logout-btn" onClick={handleLogout}>

@@ -1,0 +1,150 @@
+.mis-pedidos-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 6rem 2rem 3rem;
+}
+
+.mis-pedidos-titulo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #c8922a;
+  text-align: center;
+  margin: 0 0 0.5rem;
+}
+
+.mis-pedidos-subtitulo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin: 0 0 3rem;
+}
+
+.mis-pedidos-cargando {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #c8922a;
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 4rem;
+}
+
+.mis-pedidos-vacio {
+  text-align: center;
+  padding: 4rem 2rem;
+  border: 2px dashed rgba(200, 146, 42, 0.3);
+  border-radius: 8px;
+}
+
+.mis-pedidos-vacio p {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 1.5rem;
+}
+
+.mis-pedidos-link {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a0a0a;
+  background: #c8922a;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.mis-pedidos-link:hover {
+  background: #f0c060;
+}
+
+.mis-pedidos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pedido-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid rgba(200, 146, 42, 0.4);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: border-color 0.2s;
+}
+
+.pedido-card:hover {
+  border-color: #c8922a;
+}
+
+.pedido-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pedido-rareza {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #c8922a;
+  text-transform: capitalize;
+}
+
+.pedido-estado {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+}
+
+.estado-pendiente { background: rgba(200, 146, 42, 0.15); color: #c8922a; border: 1px solid #c8922a; }
+.estado-en-proceso { background: rgba(0, 112, 221, 0.15); color: #4da6ff; border: 1px solid #4da6ff; }
+.estado-completado { background: rgba(0, 200, 100, 0.15); color: #00c864; border: 1px solid #00c864; }
+.estado-cancelado { background: rgba(220, 50, 50, 0.15); color: #ff6464; border: 1px solid #ff6464; }
+
+.pedido-descripcion {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.pedido-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(200, 146, 42, 0.2);
+  padding-top: 0.8rem;
+}
+
+.pedido-fecha,
+.pedido-precio {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.pedido-precio {
+  color: #c8922a;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .pedido-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .pedido-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+}
