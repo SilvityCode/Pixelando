@@ -3,9 +3,16 @@ import logo from '../assets/logo_navbar.png'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
 
 function Navbar() {
   const [menuAbierto, setMenuAbierto] = useState(false)
+  const { usuario, logout } = useAuth()
+
+  const handleLogout = () => {
+    logout()
+    window.location.href = '/'
+  }
 
   return (
     <nav>
@@ -23,7 +30,21 @@ function Navbar() {
         <li><Link to="/">Inicio</Link></li>
         <li><Link to="/galeria">Galería</Link></li>
         <li><Link to="/encargos">Encargos</Link></li>
-        <li><Link to="/acceder">Acceder</Link></li>
+
+        {usuario ? (
+          // Si está logueado muestra su nombre y el botón de logout
+          <>
+            <li className="nav-usuario">Hola, {usuario.nombre}👋</li>
+            <li>
+              <button className="nav-logout-btn" onClick={handleLogout}>
+                Cerrar sesión
+              </button>
+            </li>
+          </>
+        ) : (
+          // Si no está logueado muestra el enlace de acceder
+          <li><Link to="/acceder">Acceder</Link></li>
+        )}
       </ul>
 
       <div className="hamburguesa" onClick={() => setMenuAbierto(!menuAbierto)}>
