@@ -10,7 +10,7 @@ import axios from 'axios'
 
 const AuthContext = createContext()
 
-const API_URL = 'http://localhost:3000'
+const API_URL =  import.meta.env.VITE_API_URL
 
 /**
  * Proveedor del contexto de autenticación.
